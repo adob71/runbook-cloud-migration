@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-C106WXP1NR"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+   
+     gtag('config', 'G-C106WXP1NR');
+   </script>
+
+   <style>
+   body 
+   {
+      white-space: nowrap;
+   }
+   </style>
+
+   <title>Runbook</title>
+
+   </head>
+
+   <body>
+
+      <p style="color:White; background-color:Black;" >Runbook v0.1 (MVP) - Pattern based AI powered runbook for multi cloud migration</p>
+
+      <p style="background-color:Yellow;" >Runbook</p>
+
+      <hr>
+
+      <p >Move VM to VM (VMware)</p>
+      <a href= "plan.php?domain=runbook_move_vm_to_vm&problem=runbook_move_vm_to_vm_singleton" >Singleton</a><br>
+      <a href= "plan.php?domain=runbook_move_vm_to_vm&problem=runbook_move_vm_to_vm_app_db" >App+DB</a><br>
+      <a href= "plan.php?domain=runbook_move_vm_to_vm&problem=runbook_move_vm_to_vm_web_app_db" >Web+App+DB</a><br>
+
+      <hr>
+
+      <p >Move VM to Instance (EC2)</p>
+      <a style="color: Gray" href= "plan.php?domain=runbook_move_vm_to_instance&problem=runbook_move_vm_to_instance_singleton" >Singleton</a><br>
+      <a style="color: Gray" href= "plan.php?domain=runbook_move_vm_to_instance&problem=runbook_move_vm_to_instance_app_db" >App+DB</a><br>
+      <a style="color: Gray" href= "plan.php?domain=runbook_move_vm_to_instance&problem=runbook_move_vm_to_instance_web_app_db" >Web+App+DB</a><br>
+
+      <hr>
+
+      <p >Move VM to Container (ECS+EC2)</p>
+      <a style="color: Gray" href= "plan.php?domain=runbook_move_vm_to_container&problem=runbook_move_vm_to_container_singleton" >Singleton</a><br>
+      <a style="color: Gray" href= "plan.php?domain=runbook_move_vm_to_container&problem=runbook_move_vm_to_container_app_db" >App+DB</a><br>
+      <a style="color: Gray" href= "plan.php?domain=runbook_move_vm_to_container&problem=runbook_move_vm_to_container_web_app_db" >Web+App+DB</a><br>
+
+      <hr>
+
+      <p >Move VM to Serverless Container (ECS+Fargate)</p>
+      <a style="color: Gray" href= "plan.php?domain=runbook_move_vm_to_serverless_container&problem=runbook_move_vm_to_serverless_container_singleton" >Singleton</a><br>
+      <a style="color: Gray" href= "plan.php?domain=runbook_move_vm_to_serverless_container&problem=runbook_move_vm_to_serverless_container_app_db" >App+DB</a><br>
+      <a style="color: Gray" href= "plan.php?domain=runbook_move_vm_to_serverless_container&problem=runbook_move_vm_to_serverless_container_web_app_db" >Web+App+DB</a><br>
+
+      <hr>
+
+      <p >Move VM to Serverless Code (Lambda)</p>
+      <a style="color: Gray" href= "plan.php?domain=runbook_move_vm_to_serverless_code&problem=runbook_move_vm_to_serverless_code_singleton" >Singleton</a><br>
+      <a style="color: Gray" href= "plan/plan.php?domain=runbook_move_vm_to_serverless_code&problem=runbook_move_vm_to_serverless_code_app_db" >App+DB</a><br>
+      <a style="color: Gray" href= "plan.php?domain=runbook_move_vm_to_serverless_code&problem=runbook_move_vm_to_serverless_code_web_app_db" >Web+App+DB</a><br>
+
+      <hr>
+
+      <p >Move server rack to rack (ServerLIFT)</p>
+      <a href= "plan.php?domain=runbook_move_server_rack_to_rack&problem=runbook_move_server_rack_to_rack_1_server" >1 server</a><br>
+      <a href= "plan.php?domain=runbook_move_server_rack_to_rack&problem=runbook_move_server_rack_to_rack_2_server" >2 server</a><br>
+      <a href= "plan.php?domain=runbook_move_server_rack_to_rack&problem=runbook_move_server_rack_to_rack_3_server" >3 server</a><br>
+
+      <hr>
+
+   </body>
+
+   <footer>
+
+      <a href="https://api.runbook.expert">API</a><br>
+
+      <hr>
+
+      <a href="mailto:runbook@runbook.expert">mailto</a><br>
+
+   </footer>
+
+</html>

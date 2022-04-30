@@ -1,0 +1,4 @@
+Options +Indexes
+IndexOptions FancyIndexing FoldersFirst SuppressIcon SuppressDescription NameWidth=*
+IndexOrderDefault Descending Date
+IndexIgnore *.txt
