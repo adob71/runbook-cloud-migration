@@ -1,0 +1,8 @@
+docker image ls
+docker run runbook-expert-amazonlinux:0.1
+docker ps
+docker exec -it container-name bash
+lynx localhost
+docker rmi -f image-id
+docker build -t runbook-expert-amazonlinux:0.1 .
+docker run runbook-expert-amazonlinux:0.1
