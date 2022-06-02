@@ -1,0 +1,8 @@
+FROM amazonlinux:latest
+RUN yum install -y unzip tar httpd php net-tools lynx procps sed
+ARG dir=/var/www/html/
+COPY . $dir
+RUN chown -R apache $dir && chgrp -R apache $dir
+COPY httpd-foreground /usr/local/bin/
+CMD ["httpd-foreground"]
+EXPOSE 80

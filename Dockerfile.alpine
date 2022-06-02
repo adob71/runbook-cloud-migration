@@ -1,0 +1,8 @@
+FROM alpine:latest
+RUN apk add unzip tar apache2 php php7-apache2 bash libc6-compat net-tools lynx procps sed
+ARG dir=/var/www/localhost/htdocs/
+COPY . $dir
+RUN chown -R apache $dir && chgrp -R apache $dir
+COPY httpd-foreground /usr/local/bin/
+CMD ["httpd-foreground"]
+EXPOSE 80
