@@ -1,0 +1,25 @@
+#amazonlinux
+docker image ls
+docker rmi -f image-id
+docker run runbook-expert-amazonlinux:0.1
+docker ps
+docker exec -it container-name bash
+lynx localhost
+
+docker build -t runbook-expert-amazonlinux:0.1 .
+
+docker image tag \
+runbook-expert-amazonlinux:0.1 \
+aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-expert-amazonlinux:0.1
+
+aws ecr get-login-password | docker login --username AWS --password-stdin aws_account_id.dkr.ecr.aws_region.amazonaws.com
+
+aws ecr create-repository \
+    --repository-name runbook-expert-amazonlinux \
+    --image-scanning-configuration scanOnPush=true
+
+docker push aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-expert-amazonlinux:0.1
+
+aws ecr batch-delete-image \
+      --repository-name runbook-expert-amazonlinux \
+      --image-ids imageTag=0.1
