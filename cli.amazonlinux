@@ -23,3 +23,9 @@ docker push aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-expert-amazo
 aws ecr batch-delete-image \
       --repository-name runbook-expert-amazonlinux \
       --image-ids imageTag=0.1
+
+kubectl apply -f runbook-expert-amazonlinux-deployment.yaml
+kubectl apply -f runbook-expert-amazonlinux-service.yaml
+
+kubectl delete -f runbook-expert-amazonlinux-service.yaml
+kubectl delete -f runbook-expert-amazonlinux-deployment.yaml
