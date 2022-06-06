@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: runbook-expert
+  namespace: default
+  labels:
+    app: runbook-expert-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: runbook-expert-app
+  template:
+    metadata:
+      labels:
+        app: runbook-expert-app
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/arch
+                operator: In
+                values:
+                - amd64
+                - arm64
+      containers:
+      - name: runbook-expert-alpine
+        image: 011285877396.dkr.ecr.eu-west-2.amazonaws.com/runbook-expert-alpine:0.1
+        ports:
+        - name: http
+          containerPort: 80
+        imagePullPolicy: IfNotPresent
+      nodeSelector:
+        kubernetes.io/os: linux

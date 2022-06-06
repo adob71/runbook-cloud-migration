@@ -23,3 +23,11 @@ docker push aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-expert-alpin
 aws ecr batch-delete-image \
       --repository-name runbook-expert-alpine \
       --image-ids imageTag=0.1
+
+kubectl create namespace runbook-expert
+kubectl apply -f runbook-expert-deployment.yaml
+kubectl apply -f runbook-expert-service.yaml
+
+kubectl delete -f runbook-expert-service.yaml
+kubectl delete -f runbook-expert-deployment.yaml
+kubectl delete namespace runbook-expert
