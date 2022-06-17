@@ -23,11 +23,11 @@ spec:
               - key: kubernetes.io/arch
                 operator: In
                 values:
-                #- amd64
+                  #                - amd64
                 - arm64
       containers:
       - name: runbook-expert-amazonlinux
-        image: 011285877396.dkr.ecr.eu-west-2.amazonaws.com/runbook-expert-amazonlinux:0.1
+        image: aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-expert-amazonlinux:0.1
         ports:
         - name: http
           containerPort: 80

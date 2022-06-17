@@ -1,5 +1,3 @@
-;;(c) runbook.expert
-
 (define
 
    (domain runbook_move_vm_to_vm)

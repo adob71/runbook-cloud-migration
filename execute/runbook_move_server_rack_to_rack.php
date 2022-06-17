@@ -1,5 +1,4 @@
 <?php
-//(c) runbook.expert
 
 $runbook_move_server_rack_to_rack_problem_init_file="execute/" . $argv[1] . ".init";
 $runbook_move_server_rack_to_rack_problem = file($runbook_move_server_rack_to_rack_problem_init_file);

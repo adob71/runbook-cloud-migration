@@ -1,5 +1,3 @@
-;;(c) runbook.expert
-
 (define
 
    (problem runbook_move_vm_to_vm_singleton)
