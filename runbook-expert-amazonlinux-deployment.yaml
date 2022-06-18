@@ -27,7 +27,7 @@ spec:
                 - arm64
       containers:
       - name: runbook-expert-amazonlinux
-        image: aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-expert-amazonlinux:0.1
+        image: aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-expert-amazonlinux:1.0
         ports:
         - name: http
           containerPort: 80

@@ -27,7 +27,7 @@ spec:
                 - arm64
       containers:
       - name: runbook-expert-alpine
-        image: aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-expert-alpine:0.1
+        image: aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-expert-alpine:1.0
         ports:
         - name: http
           containerPort: 80
