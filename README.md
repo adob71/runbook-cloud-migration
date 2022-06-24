@@ -24,7 +24,6 @@
 ├── log
 ├── plan
 │   ├── ff
-│   ├── mff
 │   ├── runbook_move_server_rack_to_rack_1_server.pddl
 │   ├── runbook_move_server_rack_to_rack_2_server.pddl
 │   ├── runbook_move_server_rack_to_rack_3_server.pddl
