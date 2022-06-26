@@ -2,11 +2,11 @@
 
 ### GUI
 
-[GUI](https://runbook.expert/)
+[https://runbook.expert/](https://runbook.expert/)
 
 ### API
 
-[API](https://api.runbook.expert/)
+[https://api.runbook.expert/](https://api.runbook.expert/)
 
 ### Project Structure
 ```
