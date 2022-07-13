@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: runbook-expert-amazonlinux
+  name: runbook-alpine
   namespace: default 
   labels:
-    app: runbook-expert-amazonlinux-app
+    app: runbook-alpine-app
 spec:
   selector:
-    app: runbook-expert-amazonlinux-app
+    app: runbook-alpine-app
   ports:
     - protocol: TCP
       port: 80

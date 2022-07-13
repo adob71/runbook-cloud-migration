@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: runbook-expert-alpine
+  name: runbook-alpine
   namespace: default
   labels:
-    app: runbook-expert-alpine-app
+    app: runbook-alpine-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: runbook-expert-alpine-app
+      app: runbook-alpine-app
   template:
     metadata:
       labels:
-        app: runbook-expert-alpine-app
+        app: runbook-alpine-app
     spec:
       affinity:
         nodeAffinity:
@@ -26,8 +26,8 @@ spec:
                   #                - amd64
                 - arm64
       containers:
-      - name: runbook-expert-alpine
-        image: aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-expert-alpine:1.0
+      - name: runbook-alpine
+        image: aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-alpine:1.0
         ports:
         - name: http
           containerPort: 80

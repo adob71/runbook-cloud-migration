@@ -3,34 +3,34 @@ docker image ls
 
 docker rmi -f image-id
 docker rmi -f \
-runbook-expert-alpine:1.0 \
-aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-expert-alpine:1.0
+runbook-alpine:1.0 \
+aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-alpine:1.0
 
-docker run runbook-expert-alpine:1.0
+docker run runbook-alpine:1.0
 docker ps
 docker exec -it container-name bash
 lynx localhost
 
-docker build -t runbook-expert-alpine:1.0 .
+docker build -t runbook-alpine:1.0 .
 
 docker image tag \
-runbook-expert-alpine:1.0 \
-aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-expert-alpine:1.0
+runbook-alpine:1.0 \
+aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-alpine:1.0
 
 aws ecr get-login-password | docker login --username AWS --password-stdin aws_account_id.dkr.ecr.aws_region.amazonaws.com
 
 aws ecr create-repository \
-    --repository-name runbook-expert-alpine \
+    --repository-name runbook-alpine \
     --image-scanning-configuration scanOnPush=true
 
-docker push aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-expert-alpine:1.0
+docker push aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-alpine:1.0
 
 aws ecr batch-delete-image \
-      --repository-name runbook-expert-alpine \
+      --repository-name runbook-alpine \
       --image-ids imageTag=1.0
 
-kubectl apply -f runbook-expert-alpine-deployment.yaml
-kubectl apply -f runbook-expert-alpine-service.yaml
+kubectl apply -f runbook-alpine-deployment.yaml
+kubectl apply -f runbook-alpine-service.yaml
 
-kubectl delete -f runbook-expert-alpine-service.yaml
-kubectl delete -f runbook-expert-alpine-deployment.yaml
+kubectl delete -f runbook-alpine-service.yaml
+kubectl delete -f runbook-alpine-deployment.yaml

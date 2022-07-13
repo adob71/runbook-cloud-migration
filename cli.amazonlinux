@@ -3,34 +3,34 @@ docker image ls
 
 docker rmi -f image-id
 docker rmi -f \
-runbook-expert-amazonlinux:1.0 \
-aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-expert-amazonlinux:1.0
+runbook-amazonlinux:1.0 \
+aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-amazonlinux:1.0
 
-docker run runbook-expert-amazonlinux:1.0
+docker run runbook-amazonlinux:1.0
 docker ps
 docker exec -it container-name bash
 lynx localhost
 
-docker build -t runbook-expert-amazonlinux:1.0 .
+docker build -t runbook-amazonlinux:1.0 .
 
 docker image tag \
-runbook-expert-amazonlinux:1.0 \
-aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-expert-amazonlinux:1.0
+runbook-amazonlinux:1.0 \
+aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-amazonlinux:1.0
 
 aws ecr get-login-password | docker login --username AWS --password-stdin aws_account_id.dkr.ecr.aws_region.amazonaws.com
 
 aws ecr create-repository \
-    --repository-name runbook-expert-amazonlinux \
+    --repository-name runbook-amazonlinux \
     --image-scanning-configuration scanOnPush=true
 
-docker push aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-expert-amazonlinux:1.0
+docker push aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-amazonlinux:1.0
 
 aws ecr batch-delete-image \
-      --repository-name runbook-expert-amazonlinux \
+      --repository-name runbook-amazonlinux \
       --image-ids imageTag=1.0
 
-kubectl apply -f runbook-expert-amazonlinux-deployment.yaml
-kubectl apply -f runbook-expert-amazonlinux-service.yaml
+kubectl apply -f runbook-amazonlinux-deployment.yaml
+kubectl apply -f runbook-amazonlinux-service.yaml
 
-kubectl delete -f runbook-expert-amazonlinux-service.yaml
-kubectl delete -f runbook-expert-amazonlinux-deployment.yaml
+kubectl delete -f runbook-amazonlinux-service.yaml
+kubectl delete -f runbook-amazonlinux-deployment.yaml

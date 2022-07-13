@@ -26,7 +26,7 @@
 
    <body>
 
-      <p style="color:White; background-color:Black;" >Runbook v1.0 (MVP) - Pattern based AI powered runbook for multi cloud migration</p>
+      <p style="color:White; background-color:Black;" >Runbook v1.0 (MVP) - Pattern based AI powered runbook for cloud migration</p>
 
       <p style="background-color:Yellow;" >Runbook planned</p>
 

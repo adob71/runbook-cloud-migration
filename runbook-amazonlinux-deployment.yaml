@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: runbook-expert-amazonlinux
+  name: runbook-amazonlinux
   namespace: default
   labels:
-    app: runbook-expert-amazonlinux-app
+    app: runbook-amazonlinux-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: runbook-expert-amazonlinux-app
+      app: runbook-amazonlinux-app
   template:
     metadata:
       labels:
-        app: runbook-expert-amazonlinux-app
+        app: runbook-amazonlinux-app
     spec:
       affinity:
         nodeAffinity:
@@ -26,8 +26,8 @@ spec:
                   #                - amd64
                 - arm64
       containers:
-      - name: runbook-expert-amazonlinux
-        image: aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-expert-amazonlinux:1.0
+      - name: runbook-amazonlinux
+        image: aws_account_id.dkr.ecr.aws_region.amazonaws.com/runbook-amazonlinux:1.0
         ports:
         - name: http
           containerPort: 80

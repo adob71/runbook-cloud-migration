@@ -2,11 +2,11 @@
 
 ### GUI
 
-[https://runbook.expert/](https://runbook.expert/)
+[https://runbook.adob71.com/](https://runbook.adob71.com/)
 
 ### API
 
-[https://api.runbook.expert/](https://api.runbook.expert/)
+[https://api.runbook.adob71.com/](https://api.runbook.adob71.com/)
 
 ### Project Structure
 ```
@@ -43,8 +43,8 @@
 ├── plan.php
 ├── plan.sh
 ├── README.md
-├── runbook-expert-alpine-deployment.yaml
-├── runbook-expert-alpine-service.yaml
-├── runbook-expert-amazonlinux-deployment.yaml
-└── runbook-expert-amazonlinux-service.yaml
+├── runbook-alpine-deployment.yaml
+├── runbook-alpine-service.yaml
+├── runbook-amazonlinux-deployment.yaml
+└── runbook-amazonlinux-service.yaml
 ```
